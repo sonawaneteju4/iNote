@@ -1,0 +1,105 @@
+import { useState } from 'react';
+import NoteContext from './NoteContext';
+
+
+const NoteState = (props) =>{
+    const notesInitial = [
+        {
+          "_id": "6343f8ff5e6343bed4b7ddb5",
+          "user": "63402d7553af99b0eef26534",
+          "title": "New Note Test 1 ",
+          "description": "admin / admin@gmail.com admin",
+          "tag": "test",
+          "date": "1665390388538",
+          "__v": 0
+        },
+        {
+          "_id": "6343f90f5e6343bed4b7ddb8",
+          "user": "63402d7553af99b0eef26534",
+          "title": "New Note Test 2 ",
+          "description": "admin / admin@gmail.com admin",
+          "tag": "test",
+          "date": "1665390388538",
+          "__v": 0
+        },
+        {
+          "_id": "6343f9155e6343bed4b7ddba",
+          "user": "63402d7553af99b0eef26534",
+          "title": "New Note Test 3 ",
+          "description": "admin / admin@gmail.com admin",
+          "tag": "test",
+          "date": "1665390388538",
+          "__v": 0
+        },
+        {
+            "_id": "6343f9155e6343bed4b7ddba",
+            "user": "63402d7553af99b0eef26534",
+            "title": "New Note Test 3 ",
+            "description": "admin / admin@gmail.com admin",
+            "tag": "test",
+            "date": "1665390388538",
+            "__v": 0
+          },
+          {
+            "_id": "6343f9155e6343bed4b7ddba",
+            "user": "63402d7553af99b0eef26534",
+            "title": "New Note Test 3 ",
+            "description": "admin / admin@gmail.com admin",
+            "tag": "test",
+            "date": "1665390388538",
+            "__v": 0
+          },
+          {
+            "_id": "6343f9155e6343bed4b7ddba",
+            "user": "63402d7553af99b0eef26534",
+            "title": "New Note Test 3 ",
+            "description": "admin / admin@gmail.com admin",
+            "tag": "test",
+            "date": "1665390388538",
+            "__v": 0
+          },
+          {
+            "_id": "6343f9155e6343bed4b7ddba",
+            "user": "63402d7553af99b0eef26534",
+            "title": "New Note Test 3 ",
+            "description": "admin / admin@gmail.com admin",
+            "tag": "test",
+            "date": "1665390388538",
+            "__v": 0
+          },
+          {
+            "_id": "6343f9155e6343bed4b7ddba",
+            "user": "63402d7553af99b0eef26534",
+            "title": "New Note Test 3 ",
+            "description": "admin / admin@gmail.com admin",
+            "tag": "test",
+            "date": "1665390388538",
+            "__v": 0
+          }
+      ]
+      const [notes, setNotes] = useState(notesInitial)
+      
+      //Add a Note
+      const addNote = (title, description,tag)=>{
+        setNotes(notes.push(note))
+      }
+
+      // Delete a Note
+      const deleteNote = ()=>{
+
+      }
+
+      //Edit a Note
+const editNote = ()=>{
+
+}
+
+    return(
+
+        <NoteContext.Provider value={{notes, notesInitial,addNote, deleteNote, editNote }}>
+            {props.children}
+        </NoteContext.Provider>
+            )
+}
+
+export default NoteState;
